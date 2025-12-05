@@ -1,4 +1,5 @@
 # Provoquer un mode sombre par JavaScript
+
 > JS exercise given at HEPL
 
 * * *
@@ -15,7 +16,6 @@
 Dans le cadre de cet exercice, nous vous demandons de permettre à l'utilisateur de basculer vers un mode sombre. Bien entendu, les règles sont déjà définies dans la feuille de style. Vous devez ajouter les bonnes classes aux bons éléments.
 
 ## Énoncé
-
 
 1. Au clic de l’élément `.tumbler__wrapper` vous devez ajouter les classes
 2. `body--night-mode` à l'élément `body`
