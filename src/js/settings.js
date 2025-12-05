@@ -5,5 +5,5 @@ export const settings = {
     tumblerClass: 'tumbler--night-mode',
     tumblerSelector: '.tumbler',
     postSelector: '.post',
-    postClass: 'post--night-mode'
+    postClass: 'post--night-mode',
 };
