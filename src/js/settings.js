@@ -4,6 +4,6 @@ export const settings = {
     bodyClass: 'body--night-mode',
     tumblerClass: 'tumbler--night-mode',
     tumblerSelector: '.tumbler',
-    postClass: 'post--night-mode',
-    postSelector: '.post'
+    postSelector: '.post',
+    postClass: 'post--night-mode'
 };

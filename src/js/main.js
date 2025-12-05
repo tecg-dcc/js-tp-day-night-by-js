@@ -5,20 +5,18 @@ const dayNight = {
         document.documentElement.classList.add(settings.jsEnabledClass);
         this.btn = document.querySelector(settings.btnSelector);
         this.tumblerElement = document.querySelector(settings.tumblerSelector);
-        this.postElements = document.querySelectorAll(settings.postSelector);
-
+        this.posts = document.querySelectorAll(settings.postSelector);
         this.btn.addEventListener('click', () => {
             this.changeClasses();
         });
 
     },
-
     changeClasses() {
         document.body.classList.toggle(settings.bodyClass);
         this.tumblerElement.classList.toggle(settings.tumblerClass);
-        this.postElements.forEach((postElement) => {
-            postElement.classList.toggle(settings.postClass);
-        });
+        for (const post of this.posts) {
+            post.classList.toggle(settings.postClass);
+        }
     },
 };
 
