@@ -1,28 +1,25 @@
-(function () {
-      const DayNight = {
-        cacheDom() {
-          this.body = document.body;
-          this.tumbler = document.querySelector('.tumbler');
-          this.posts = document.querySelectorAll('.post');
-          this.tumblerWrapper = document.querySelector('.tumbler__wrapper');
-        },
-        init() {
-          window.document.documentElement.classList.add('js-enabled');
-          this.cacheDom();
-          this.addEventListeners();
-        },
-        addEventListeners() {
-          console.log(this.tumblerWrapper);
-          this.tumblerWrapper.addEventListener('click', () => {
-            this.body.classList.toggle('body--night-mode');
-            this.tumbler.classList.toggle('tumbler--night-mode');
-            this.posts.forEach(post => {
-              post.classList.toggle('post--night-mode')
-            });
-          })
-        }
+import {settings} from './settings';
 
-      };
-      DayNight.init();
-    }
-)();
+const dayNight = {
+    init() {
+        document.documentElement.classList.add(settings.jsEnabledClass);
+        this.btn = document.querySelector(settings.btnSelector);
+        this.tumblerElement = document.querySelector(settings.tumblerSelector);
+        this.postElements = document.querySelectorAll(settings.postSelector);
+
+        this.btn.addEventListener('click', () => {
+            this.changeClasses();
+        });
+
+    },
+
+    changeClasses() {
+        document.body.classList.toggle(settings.bodyClass);
+        this.tumblerElement.classList.toggle(settings.tumblerClass);
+        this.postElements.forEach((postElement) => {
+            postElement.classList.toggle(settings.postClass);
+        });
+    },
+};
+
+dayNight.init();
